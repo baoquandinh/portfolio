@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./styles/Home.css"
+import Home from "./components/Home"
+import {
+  AppBar,
+  Grid,
+  IconButton,
+  Toolbar,
+  Typography,
+  Container,
+} from "@material-ui/core";
 
 function App() {
+  const navItems = ["Home", "About", "Skills", "Portfolio", "Contact Me"]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ width: "100vw" }}>
+      <AppBar style={{ position: "sticky", position: "-webkit-sticky" }}>
+        <Toolbar>
+          <Grid container>
+            <Grid item xs={2}>
+              <Typography variant="h6">Baoquan</Typography>
+            </Grid>
+          </Grid>
+          <Grid container>
+            {navItems.map(item => {
+              return <Grid item key={item} xs={2}>
+              <a href={`#${item.toLowerCase()}`}>
+                <Typography variant="h6">{item}</Typography>
+              </a>
+            </Grid>
+            })}
+          </Grid>
+        </Toolbar>
+      </AppBar>
+        <Home />
     </div>
   );
 }
