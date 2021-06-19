@@ -13,7 +13,7 @@ export const NavBar = () => {
     <div className="navbar-container">
       <div className="navbar-nav">
         {items.map((item) => (
-          <li key={item.name} className="navbar-item">
+          <li key={item.value.toLowerCase()} className="navbar-item">
             <a href={`#${item.name.toLowerCase()}`} className="navbar-link">
               <span className="navbar-link-text">{item.value}</span>
             </a>
