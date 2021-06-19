@@ -1,0 +1,33 @@
+.navbar-container {
+    position: fixed;
+    width: 100%;
+    // border: 1px solid red;
+}
+
+.navbar-nav {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    // border: 1px solid red;
+}
+
+.navbar-item {
+    height: 100%;
+    width: 10rem;
+    // border: 1px solid red;
+    list-style-type: none;
+}
+
+.navbar-item:first-child {
+    margin-right: auto;
+}
+
+.navbar-link {
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    text-decoration: none;
+}
