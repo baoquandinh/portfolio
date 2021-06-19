@@ -1,41 +1,53 @@
-import { Container, Grid } from "@material-ui/core";
-
-const Home = () => {
-  return (
-    <Grid container>
-      {/* Main Body */}
-      <Grid item={12}>
-        <Grid container>
-          <Grid item xs={2}>
-            <Grid container justifyContent="center" alignItems="center">
-              <Grid item xs={12}>
-                A
-              </Grid>
-              <Grid item xs={12}>
-                B
-              </Grid>
-              <Grid item xs={12}>
-                C
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item xs={2}>
-            <Grid container>
-              <Grid item xs={12}>
-                Hi, I am Baoquan
-              </Grid>
-              <Grid item={12}>Frontend developer</Grid>
-              <Grid item={12}>
-                Lots of words here vLots of words here Lots of words here Lots
-                of words here Lots of words here
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Grid>
-      {/* Scrolling Section */}
-    </Grid>
-  );
-};
-
-export default Home;
+import {
+  UilLinkedin,
+  UilGithub,
+} from "@iconscout/react-unicons";
+import { Component } from "react";
+import "../styles/Home.scss";
+import { Typography, Button } from "@material-ui/core";
+export default class Home extends Component {
+  icons = [
+    {
+      name: "linkedin",
+      component: <UilLinkedin size="40" />,
+      src: "https://linkedin.com/in/baoquandinh",
+    },
+    {
+      name: "github",
+      component: <UilGithub size="40" />,
+      src: "https://github.com/baoquandinh",
+    },
+  ];
+  render() {
+    return (
+      <div className="home-container">
+        <div className="intro-container">
+          <Typography className="intro-item" variant="h2" component="h2">
+            Hello, I'm Baoquan Dinh
+          </Typography>
+          <Typography className="intro-item" variant="h4" component="h4">
+            A Front-End Developer
+          </Typography>
+          <Typography
+            className="intro-item intro-text"
+            variant="body"
+            component="p"
+          >
+            Lots of words here vLots of words here Lots of words here Lots of
+            words here Lots of words here
+          </Typography>
+        </div>
+        <div className="intro-learn-more-container">
+        <Button
+            variant="contained"
+            color="primary"
+            className="learn-more-button"
+            href="#about"
+          >
+            Click to learn more
+          </Button>
+        </div>
+      </div>
+    );
+  }
+}

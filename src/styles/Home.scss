@@ -1,0 +1,35 @@
+.home-container {
+    height: 100%;
+    width: 100%;
+    // margin-top: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .intro-container {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // border: 3px solid black;
+
+        .intro-text {
+            width: 30%;
+            padding: 1rem 0;
+            // border: 3px solid black;
+        }
+
+        .intro-item {
+            
+            margin: 0 1.5rem;
+        }
+    }
+
+    .learn-more-button {
+        height: 4rem;
+        border-radius: 30px;
+    }
+}
